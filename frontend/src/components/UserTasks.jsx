@@ -35,7 +35,7 @@
     }, [username, token]);
 
     const markAsCompleted = (taskId) => {
-      axios.put(`http://localhost:8080/api/tasks/status/${taskId}`, 
+      axios.put(`https://teamsync-zeoj.onrender.com/api/tasks/status/${taskId}`, 
         'COMPLETED', 
         {
           headers: {
