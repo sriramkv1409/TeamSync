@@ -3,6 +3,8 @@ import io.github.cdimascio.dotenv.Dotenv;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import java.util.TimeZone;
+
 @SpringBootApplication
 public class SpringbbootfirstApplication {
 
@@ -21,6 +23,7 @@ public class SpringbbootfirstApplication {
 		System.setProperty("SPRING_SECURITY_USER_ROLES", dotenv.get("SPRING_SECURITY_USER_ROLES"));
 		System.setProperty("APP_JWT_SECRET", dotenv.get("APP_JWT_SECRET"));
 		System.setProperty("APP_JWT_EXPIRATION_MILLISECONDS", dotenv.get("APP_JWT_EXPIRATION_MILLISECONDS"));
+		TimeZone.setDefault(TimeZone.getTimeZone("Asia/Kolkata"));
 		SpringApplication.run(SpringbbootfirstApplication.class, args);
 	}
 

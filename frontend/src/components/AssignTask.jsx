@@ -37,7 +37,7 @@ const AssignTask = () => {
         try {
             // 3. Make the POST request using axios
             await axios.post(
-                'http://localhost:8080/api/tasks/assign',
+                'https://teamsync-zeoj.onrender.com/api/tasks/assign',
                 taskData, // The data is the second argument
                 {
                     headers: {

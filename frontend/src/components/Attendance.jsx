@@ -14,14 +14,14 @@ const Attendance = () => {
   const fetchAttendance = async () => {
     try {
       if (role === "ROLE_ADMIN") {
-        const res = await axios.get("http://localhost:8080/api/attendance/today", {
+        const res = await axios.get("https://teamsync-zeoj.onrender.com/api/attendance/today", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
         });
         setAllAttendance(res.data);
       } else {
-        const res = await axios.get(`http://localhost:8080/api/attendance/today/${username}`, {
+        const res = await axios.get(`https://teamsync-zeoj.onrender.com/api/attendance/today/${username}`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -39,7 +39,7 @@ const Attendance = () => {
 
   const handleCheckIn = async () => {
     try {
-      await axios.post(`http://localhost:8080/api/attendance/check-in/${username}`, null, {
+      await axios.post(`https://teamsync-zeoj.onrender.com/api/attendance/check-in/${username}`, null, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -53,7 +53,7 @@ const Attendance = () => {
 
   const handleCheckOut = async () => {
     try {
-      await axios.post(`http://localhost:8080/api/attendance/check-out/${username}`, null, {
+      await axios.post(`https://teamsync-zeoj.onrender.com/api/attendance/check-out/${username}`, null, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

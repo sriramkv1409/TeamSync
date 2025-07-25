@@ -28,7 +28,7 @@ const AddEmployees = ()=>{
    }
     const roleArray = roleNames.split(",").map((role) => role.trim());
     try {
-      const req = await axios.post("http://localhost:8080/employee/add",
+      const req = await axios.post("https://teamsync-zeoj.onrender.com/employee/add",
     {
         name,
         email,

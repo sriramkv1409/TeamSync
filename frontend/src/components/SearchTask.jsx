@@ -19,7 +19,7 @@ const SearchTask = () => {
 
     try {
       setLoading(true);
-      const response = await axios.get(`http://localhost:8080/api/tasks/username/${username}`, {
+      const response = await axios.get(`https://teamsync-zeoj.onrender.com/api/tasks/username/${username}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -37,7 +37,7 @@ const SearchTask = () => {
 const handleDelete = async (taskId) => {
   const token = localStorage.getItem("token");
   try {
-    await axios.delete(`http://localhost:8080/api/tasks/delete/${taskId}`, {
+    await axios.delete(`https://teamsync-zeoj.onrender.com/api/tasks/delete/${taskId}`, {
       headers: {
         Authorization: `Bearer ${token}`,
       }

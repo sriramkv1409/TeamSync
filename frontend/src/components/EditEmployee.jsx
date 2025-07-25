@@ -20,7 +20,7 @@ const EditEmployee = () => {
     // Fetch the current employee's data when the component loads
     const fetchEmployeeData = async () => {
       try {
-        const response = await axios.get(`http://localhost:8080/employee/${empId}`, {
+        const response = await axios.get(`https://teamsync-zeoj.onrender.com/employee/${empId}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         // Pre-fill the form with fetched data, excluding the password
@@ -52,7 +52,7 @@ const EditEmployee = () => {
     }
 
     try {
-      await axios.put(`http://localhost:8080/employee/${empId}`, payload, {
+      await axios.put(`https://teamsync-zeoj.onrender.com/employee/${empId}`, payload, {
         headers: { Authorization: `Bearer ${token}` },
       });
       alert("Employee updated successfully!");

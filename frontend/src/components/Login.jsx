@@ -10,7 +10,7 @@ const Login = () => {
   async function handleLogin(event) {
     event.preventDefault();
     try {
-      const request = await axios.post("http://localhost:8080/api/auth/login", {
+      const request = await axios.post("https://teamsync-zeoj.onrender.com/api/auth/login", {
         userName,
         password,
       });

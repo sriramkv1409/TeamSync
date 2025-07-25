@@ -16,7 +16,7 @@ const Signup = () => {
     e.preventDefault();
     const roleArray = roleNames.split(",").map((role) => role.trim());
     try {
-      const req = await axios.post("http://localhost:8080/api/auth/register", {
+      const req = await axios.post("https://teamsync-zeoj.onrender.com/api/auth/register", {
         name,
         email,
         password,
