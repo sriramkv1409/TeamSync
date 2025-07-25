@@ -12,7 +12,7 @@
 
     const fetchTasks = () => {
       if (username && token) {
-        axios.get(`http://localhost:8080/api/tasks/username/${username}`, {
+        axios.get(`https://teamsync-zeoj.onrender.com/api/tasks/username/${username}`, {
           headers: {
             Authorization: `Bearer ${token}`
           }
