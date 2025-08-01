@@ -25,6 +25,8 @@ public class SpringbbootfirstApplication {
 		System.setProperty("SPRING_SECURITY_USER_ROLES", dotenv.get("SPRING_SECURITY_USER_ROLES"));
 		System.setProperty("APP_JWT_SECRET", dotenv.get("APP_JWT_SECRET"));
 		System.setProperty("APP_JWT_EXPIRATION_MILLISECONDS", dotenv.get("APP_JWT_EXPIRATION_MILLISECONDS"));
+		System.setProperty("EMAIL",dotenv.get("EMAIL"));
+		System.setProperty("APP_PASSWORD",dotenv.get("APP_PASSWORD"));
 		TimeZone.setDefault(TimeZone.getTimeZone("Asia/Kolkata"));
 		SpringApplication.run(SpringbbootfirstApplication.class, args);
 	}
