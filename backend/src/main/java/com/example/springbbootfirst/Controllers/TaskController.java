@@ -10,6 +10,7 @@ import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @CrossOrigin(origins = "http://localhost:5173") // Allow requests from your React app
 @RestController
@@ -41,7 +42,8 @@ public class TaskController {
     }
 
     @PutMapping("/status/{taskId}")
-    public ResponseEntity<Task> updateStatus(@PathVariable Long taskId, @RequestBody String status) {
+    public ResponseEntity<Task> updateStatus(@PathVariable Long taskId,  @RequestBody Map<String, String> payload) {
+        String status = payload.get("status");
         Task updatedTask = taskService. updateTaskStatus(taskId, status);
         return new ResponseEntity<>(updatedTask, HttpStatus.OK);
     }
